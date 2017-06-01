@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if invitations %}
+<h1> Status of List of Inviations send</h1>
+{% for invitation in invitations %}
+<ul>
+    <li>{{ invitation.emailid }}</li>
+    <li>{{ invitation.status }}</li>
+</ul>
+{% endfor %}
+{% else %}
+<h1>No Invitations send so far</h1>
+{% endif %}
+<hr>
+<a href="#">Login</a><a href="#">Signin</a><a href="#">Logout</a>
+</body>
+</html>
